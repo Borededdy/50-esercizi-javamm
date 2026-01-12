@@ -1,0 +1,12 @@
+int roundSum(int a, int b, int c) {
+  return round(a) + round(b) + round(c);
+}
+
+int round(int n) {
+	int ultimaCifra = n % 10;
+	if(ultimaCifra < 5){
+		return n - ultimaCifra;
+	} else {
+		return n + (10 - ultimaCifra);
+	}
+}
