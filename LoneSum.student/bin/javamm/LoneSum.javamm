@@ -1,0 +1,20 @@
+int loneSum(int a, int b, int c) {
+	if(a == b && a != c) return c;
+	if(a == c && a != b) return b;
+	if(c == b && c != a) return a;
+	if(a != b && a != c) return a + (b + c);
+	return 0;
+}
+
+//Soluzione alternativa con uso di variabile d'appoggio
+/*int loneSum(int a, int b, int c) {
+    int sum = 0;
+    
+    if (a != b && a != c) sum += a;
+    
+    if (b != a && b != c) sum += b;
+    
+    if (c != a && c != b) sum += c;
+    
+    return sum;
+}*/

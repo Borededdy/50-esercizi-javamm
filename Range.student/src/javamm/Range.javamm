@@ -1,0 +1,7 @@
+boolean range(int n, int l, int r, boolean o) {
+	if(!o){
+		return (n >= l && n <= r);
+	} else {
+		return !(n >= l && n <= r);
+	}
+}
