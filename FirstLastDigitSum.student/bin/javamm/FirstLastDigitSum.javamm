@@ -1,0 +1,11 @@
+int firstLastDigitSum(int n) {
+	int LastDigit = n % 10;
+	
+	while(n > 9){
+		n /= 10;
+	}
+	
+	return n + LastDigit;
+}
+
+System.out.println(firstLastDigitSum(1095359));

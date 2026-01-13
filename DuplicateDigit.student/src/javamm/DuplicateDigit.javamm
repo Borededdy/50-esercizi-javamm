@@ -1,0 +1,19 @@
+long duplicateDigit(int n) {
+	long duplicatedDigit = 0;
+	long posizione = 1;
+	
+	while (n > 0) {
+		int cifra = n % 10;
+		
+		long coppia = cifra * 11;
+		
+		duplicatedDigit += coppia * posizione;
+		
+		posizione *= 100;
+		
+		n /= 10;
+		
+	}
+	
+	return duplicatedDigit;
+}
