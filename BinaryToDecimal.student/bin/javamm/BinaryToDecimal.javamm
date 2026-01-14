@@ -1,0 +1,11 @@
+long decimal(int[] a) {
+	long converted = 0;
+	int pow = 0;
+	
+	for(int i = a.length - 1; i >= 0; i--) {
+		converted +=(int) Math.pow(2, pow) * a[i];
+		pow++;
+	}
+	
+	return converted;
+}
