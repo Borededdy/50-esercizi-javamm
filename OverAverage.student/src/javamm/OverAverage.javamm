@@ -1,0 +1,29 @@
+int[] overAverage(int[] a) {
+	int sum = 0;
+	
+	for(int num : a){
+		sum += num;
+	}
+	
+	double avg = (double) sum / a.length;
+	
+	int c = 0;
+	
+	for(int num : a){
+		if(num > avg){
+			c++;
+		} 
+	}
+	
+	int[] numbersOverAvg = new int[c];
+	int indx = 0;
+	
+	for(int num : a){
+		if(num > avg){
+			numbersOverAvg[indx] = num;
+			indx++;
+		} 
+	}
+	
+	return numbersOverAvg;
+}

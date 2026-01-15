@@ -1,0 +1,31 @@
+boolean anagrams(int[] s, int[] t) {
+	
+	//controllo subito se hanno lunghezze differenti, quindi non sono anagrammi.
+	if(s.length != t.length) return false;
+		
+	int[] sSorted = orderArray(s);
+	int[] tSorted = orderArray(t);
+		
+	for(int i = 0; i < sSorted.length; i++) {
+		if(sSorted[i] != tSorted[i]){
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+int[] orderArray(int[] arr) {
+	for (int i = 0; i < arr.length; i++) {
+        for (int j = i + 1; j < arr.length; j++) {
+            int tmp = 0;
+            if (arr[i] > arr[j]) {
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+    
+    return arr;
+}

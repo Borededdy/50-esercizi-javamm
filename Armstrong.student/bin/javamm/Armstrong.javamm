@@ -1,0 +1,19 @@
+boolean armstrong(int n) {
+	int numerocifre = 0;
+	int tmp = n;
+	int sum = 0;
+	
+	while(tmp > 0) {
+		numerocifre++;
+		tmp /= 10;
+	}
+	
+	tmp = n;
+	while(tmp > 0){
+		sum +=(int) Math.pow((tmp % 10), numerocifre);
+		tmp /= 10;
+	}
+	
+	if(sum == n) return true;
+	return false;
+}
